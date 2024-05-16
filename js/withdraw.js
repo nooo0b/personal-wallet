@@ -1,6 +1,10 @@
 document.getElementById('btn-withdraw').addEventListener('click', function(){
     const withdrawAmount = document.getElementById('withdraw-amount');
     const withdraw = parseFloat(withdrawAmount.value);
+    if (isNaN(withdraw)) {
+        alert('Please Provide A Valid Number');
+        return;
+    }
 
     const totalWithdraw = document.getElementById('total-withdraw');
     const currentWithdraw = parseFloat(totalWithdraw.innerText);
